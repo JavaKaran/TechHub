@@ -1,0 +1,44 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "e-commerce full stack application",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev backend/server.ts",
+    "build": "tsc",
+    "heroku-postbuild": "tsc && cd frontend && npm i --force && npm run build",
+    "data:import": "npx ts-node backend/seeder.ts",
+    "data:destroy": "npx ts-node backend/seeder.ts -d"
+  },
+  "author": "Karan Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
+    "@types/supertest": "^2.0.12",
+    "bcryptjs": "^2.4.3",
+    "colors.ts": "^1.0.20",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "concurrently": "^7.1.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.6.3"
+  }
+}
